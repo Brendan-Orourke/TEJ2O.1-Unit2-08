@@ -4,58 +4,58 @@
  * Created on: Sep 2025
  * This program Changes the color of an RGB LED
 */
+
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
 input.onButtonPressed(Button.A, function () {
-    pins.digitalWritePin(DigitalPin.P15, 0)
+    //cycles colors
+    basic.clearScreen()
+    basic.showArrow(ArrowNames.East)
+
+    //shows red                                                                        
+    pins.digitalWritePin(DigitalPin.P14, 1)
+    basic.pause(1000)
     pins.digitalWritePin(DigitalPin.P14, 0)
 
-    // turns on red LED
-    // turns on red LED
-    pins.digitalWritePin(DigitalPin.P16, 1)
-    basic.pause(1000)
-    pins.digitalWritePin(DigitalPin.P16, 0)
-
-    // turns on blue LED
-    // turns on blue LED
+    //shows green  
     pins.digitalWritePin(DigitalPin.P15, 1)
     basic.pause(1000)
     pins.digitalWritePin(DigitalPin.P15, 0)
 
-    // turns on green LED
-    // turns on green LED
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(1000)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-
-    // turns on green and red LED
-    // turns on green and red LED
-    pins.digitalWritePin(DigitalPin.P14, 1)
+    //shows blue 
     pins.digitalWritePin(DigitalPin.P16, 1)
     basic.pause(1000)
-    pins.digitalWritePin(DigitalPin.P14, 0)
     pins.digitalWritePin(DigitalPin.P16, 0)
 
-    // turns on blue and red LED
-    // turns on blue and red LED
+    //shows red + green
+    pins.digitalWritePin(DigitalPin.P14, 1)
+    pins.digitalWritePin(DigitalPin.P15, 1)
+    basic.pause(1000)
+    pins.digitalWritePin(DigitalPin.P14, 0)
+    pins.digitalWritePin(DigitalPin.P15, 0)
+
+    //shows green + blue   
     pins.digitalWritePin(DigitalPin.P15, 1)
     pins.digitalWritePin(DigitalPin.P16, 1)
     basic.pause(1000)
     pins.digitalWritePin(DigitalPin.P15, 0)
     pins.digitalWritePin(DigitalPin.P16, 0)
 
-    // turns on blue and green LED
-    // turns on blue and green LED
-    pins.digitalWritePin(DigitalPin.P15, 1)
+    //shows blue + red   
+    pins.digitalWritePin(DigitalPin.P16, 1)
     pins.digitalWritePin(DigitalPin.P14, 1)
     basic.pause(1000)
-    pins.digitalWritePin(DigitalPin.P15, 0)
+    pins.digitalWritePin(DigitalPin.P16, 0)
     pins.digitalWritePin(DigitalPin.P14, 0)
 
-    // turns on blue and green and red LED
-    // turns on blue and green and red LED
-    pins.digitalWritePin(DigitalPin.P15, 1)
+    //shows red + green + blue  
     pins.digitalWritePin(DigitalPin.P14, 1)
+    pins.digitalWritePin(DigitalPin.P15, 1)
     pins.digitalWritePin(DigitalPin.P16, 1)
+    basic.pause(1000)
+    pins.digitalWritePin(DigitalPin.P14, 0)
+    pins.digitalWritePin(DigitalPin.P15, 0)
+    pins.digitalWritePin(DigitalPin.P16, 0)
+    basic.showIcon(IconNames.Yes)
 })
