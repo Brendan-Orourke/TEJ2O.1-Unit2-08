@@ -4,6 +4,8 @@
  * Created on: Sep 2025
  * This program Changes the color of an RGB LED
 */
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
 
 input.onButtonPressed(Button.A, function () {
     pins.digitalWritePin(DigitalPin.P15, 0)
